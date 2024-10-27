@@ -6,8 +6,24 @@
 </head>
 <body>
   <form action="/upload" method="POST" enctype="multipart/form-data">
-    <input type="file" name="receipt">
+
     <button type="submit">Upload</button>
+
+    <label for="item">Item</label>
+    <input type="text" id="item" name="Item" />
+
+    <label for="receipt">Receipt</label>
+    <input type="file" id="receipt" name="receipt">
+
+    <label for="description">Description</label>
+    <input type="text" id="description" name="Description" />
+
+    <label for="price">Price</label>
+    <input type="text" id="price" name="Price" />
+
+    <label for="percentage">Percentage work use</label>
+    <input type="number" id="percentage" name="Percentage work use" value="100" />
+
   </form>
 </body>
 </html>
