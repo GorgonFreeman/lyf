@@ -73,11 +73,29 @@ class FileDropzone extends HTMLElement {
     this.listen();
   }
   
-  render() {    
+  render() {
+    const multiple = this.getAttribute('multiple');
+    const required = this.getAttribute('required');
+    const name = this.getAttribute('name');
+    const id = this.dataset['id'];
+    const accept = this.getAttribute('accept');
+    const capture = this.getAttribute('capture');
+    
+    const attrsFromParent = {
+      ...(multiple !== null) && { multiple },
+      ...(required !== null) && { required },
+      ...name && { name },
+      ...id && { id },
+      ...(accept !== null) && { accept },
+      ...(capture !== null) && { capture },
+    };
+    
+    const attrsFromParentString = Object.entries(attrsFromParent).map(([k,v]) => `${ k }="${ v }"`).join(' ');
+    
     this.innerHTML = `
-      <input type="file" multiple>
-      <span class="file_dropzone_display"></span>
-      <button class="file_dropzone_clear_button ${ this.files.length ? '_show' : '' }">X</button>
+      <input type="file" ${ attrsFromParentString }>
+      <span class="file_dropzone_display" aria-live="polite"></span>
+      <button class="file_dropzone_clear_button ${ this.files.length ? '_show' : '' }" aria-label="Clear selected files">X</button>
     `;
   }
   
@@ -135,4 +153,5 @@ class FileDropzone extends HTMLElement {
   }
 }
 
+// Define the custom element
 customElements.define('file-dropzone', FileDropzone);
