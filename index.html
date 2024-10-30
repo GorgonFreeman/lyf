@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tax Receipt</title>
   <script src="/lyf/scripts.js"></script>
+  <style src="/lyf/styles.css"></style>
 </head>
 <body>
   <form action="https://1333-163-47-69-48.ngrok-free.app/randoFormDataTest" method="POST" enctype="multipart/form-data">
@@ -17,7 +18,7 @@
 
     <p>
       <label for="receipt">Receipt</label>
-      <input type="file" id="receipt" name="receipt">
+      <file-dropzone name="receipt" multiple>
     </p>
 
     <p>
