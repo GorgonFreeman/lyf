@@ -7,22 +7,32 @@
 <body>
   <form action="https://96f5-163-47-69-48.ngrok-free.app/randoFormProcessAndUpload" method="POST" enctype="multipart/form-data">
 
-    <label for="item">Item</label>
-    <input type="text" id="item" name="Item" />
+    <span>
+      <label for="item">Item</label>
+      <input type="text" id="item" name="Item" />
+    </span>
 
-    <label for="receipt">Receipt</label>
-    <file-dropzone name="receipt" multiple></file-dropzone>
+    <span>
+      <label for="receipt">Receipt</label>
+      <file-dropzone name="receipt" multiple></file-dropzone>
+    </span>
 
     <button type="submit">Upload</button>
 
-    <label for="description">Description</label>
-    <input type="text" id="description" name="Description" />
+    <span>
+      <label for="description">Description</label>
+      <input type="text" id="description" name="Description" />
+    </span>
 
-    <label for="price">Price</label>
-    <input type="text" id="price" name="Price" />
+    <span>
+      <label for="price">Price</label>
+      <input type="text" id="price" name="Price" />
+    </span>
 
-    <label for="percentage">Percentage work use</label>
-    <input type="number" id="percentage" name="Percentage work use" value="100" />
+    <span>
+      <label for="percentage">Percentage work use</label>
+      <input type="number" id="percentage" name="Percentage work use" value="100" />
+    </span>
 
     <input type="hidden" name="drivePath" value="lyf.tax">
     <input type="hidden" name="sheetsPath" value="lyf.tax">
@@ -30,8 +40,8 @@
 
   </form>
 
-  <script src="/lyf/scripts.js"></script>
-  <link rel="stylesheet" type="text/css" href="/lyf/styles.css">
+  <script src="./scripts.js"></script>
   <link rel="stylesheet" type="text/css" href="./file_dropzone.css">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
 </body>
 </html>

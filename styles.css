@@ -16,7 +16,12 @@ form {
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
 
   button {
     padding: 10px;
