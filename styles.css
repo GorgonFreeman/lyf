@@ -1,0 +1,16 @@
+body {
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+form {
+  margin: 0 auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  label {
+    margin-top: 10px;
+  }
+}
