@@ -1,10 +1,12 @@
 * {
   box-sizing: border-box;
+  font-size: inherit;
 }
 
 html {
   background: var(--color_background);
   color: var(--color_text);
+  font-size: 20px;
 }
 
 html input {
@@ -20,8 +22,8 @@ html file-dropzone {
 }
 
 html button {
-  background: var(--color_input);
-  color: currentColor;
+  background: var(--color_text);
+  color: var(--color_background);
   border: none;
 }
 
@@ -47,6 +49,10 @@ form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  * {
+    width: 100%;
+  }
 
   label {
     display: block;
