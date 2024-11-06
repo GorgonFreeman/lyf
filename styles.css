@@ -9,19 +9,19 @@ html {
   font-size: 20px;
 }
 
-html input {
+input {
   background: var(--color_input);
   color: currentColor;
-  border: none;
+  border: 1px solid currentColor;
 }
 
-html file-dropzone {
+file-dropzone {
   background: var(--color_input);
   color: currentColor;
   border-color: var(--color_text);
 }
 
-html button {
+button {
   background: var(--color_text);
   color: var(--color_background);
   border: none;
@@ -50,7 +50,7 @@ form {
   flex-direction: column;
   gap: 20px;
 
-  * {
+  > *, > span > * {
     width: 100%;
   }
 
