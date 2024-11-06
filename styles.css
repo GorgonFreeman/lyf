@@ -3,7 +3,37 @@
 }
 
 html {
+  background: var(--color_background);
+  color: var(--color_text);
+}
 
+html input {
+  background: var(--color_input);
+  color: currentColor;
+  border: none;
+}
+
+html file-dropzone {
+  background: var(--color_input);
+  color: currentColor;
+  border-color: var(--color_text);
+}
+
+html button {
+  background: var(--color_input);
+  color: currentColor;
+  border: none;
+}
+
+html[color-scheme="matrix"] {
+  --color_background: #131c1b;
+  --color_text: #6fa59a;
+  --color_input: #445350;
+
+  --border-color: #6fa59a;
+  --background-color: #445350;
+  --border-color-active: #4dffdb;
+  --background-color-active: #6fa59a;
 }
 
 body {
