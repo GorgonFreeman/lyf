@@ -1,0 +1,47 @@
+<html lang="en" color-scheme="matrix">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuel</title>
+</head>
+<body>
+  <form action="https://australia-southeast1-foxtware.cloudfunctions.net/randoFormProcessAndUpload" method="POST" enctype="multipart/form-data">
+
+    <span>
+      <label for="receipt">Receipt</label>
+      <file-dropzone name="receipt" multiple></file-dropzone>
+    </span>
+
+    <button type="submit">Upload</button>
+
+    <span>
+      <label for="price">Price</label>
+      <input type="text" id="price" name="Price" />
+    </span>
+
+    <span>
+      <label for="date">Date</label>
+      <input type="text" id="date" name="Date" />
+    </span>
+
+    <span>
+      <label for="fuel_type">Fuel Type</label>
+      <input type="text" id="fuel_type" name="Fuel Type" />
+    </span>
+
+    <span>
+      <label for="odometer">Odometer</label>
+      <input type="text" id="odometer" name="Odometer" />
+    </span>
+
+    <input type="hidden" name="drivePath" value="lyf.fuel">
+    <input type="hidden" name="sheetsPath" value="lyf.fuel">
+    <input type="hidden" name="sheetName" value="Fuel">
+
+  </form>
+
+  <script src="./scripts.js"></script>
+  <link rel="stylesheet" type="text/css" href="./file_dropzone.css">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+</body>
+</html>
